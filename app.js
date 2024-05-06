@@ -27,3 +27,6 @@ boxes.forEach((box) => {
 });
 
 });
+
+
+console.log("updated");
