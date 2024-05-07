@@ -1,5 +1,9 @@
+const socket =io('http://localhost:8000')
+
 let boxes = document.querySelectorAll(".box")
+
 let reset_btn = document.querySelector("#reset");
+
 let turnO = true;
 let newGameBtn=document.querySelector("#new_btn");
 let winMsg = document.querySelector("#win");
@@ -24,7 +28,9 @@ boxes.forEach((box) => {
   box.addEventListener("click", () => {
     if (turnO) {
       box.innerText = "O";
+    
       turnO = false;
+      
     }
     else {
       box.innerText = "X";
